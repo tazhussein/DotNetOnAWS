@@ -10,11 +10,11 @@ namespace OldWebApp.Factories
     public class GreetingsFactoryV2 : IGreetingsFactory
     {
         //welcome messages API deployed to Lambda
-        private const string _welcomeMessageServiceURL = "https://hqeu8jfbca.execute-api.ap-southeast-2.amazonaws.com/Prod/api/";
+        private const string _welcomeMessageServiceURL = "<Lambda API URL>/api/"; //TODO: Use AWS Parameter store
         private const string _welcomeMessageResource = "welcomemessage";
 
         //local weather API deployed to ECS as a docker container
-        private const string _localWeatherServiceURL = "http://localweatherapi-807157383.ap-southeast-2.elb.amazonaws.com/api/";
+        private const string _localWeatherServiceURL = "<ECS Service API>/api/"; //TODO: Use AWS Parameter store
         private const string _localWeatherResource = "localWeather";
 
         public GreetingsModel GetGreeting(string userName)
