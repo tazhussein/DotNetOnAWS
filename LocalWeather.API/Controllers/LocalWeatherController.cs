@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace LocalWeather.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class LocalWeatherController : ControllerBase
     {
         private readonly ILogger<LocalWeatherController> _logger;
@@ -37,7 +37,5 @@ namespace LocalWeather.API.Controllers
             }
 
         }
-
-
     }
 }
