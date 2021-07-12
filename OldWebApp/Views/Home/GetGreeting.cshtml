@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Greeting Page";
+}
+
+@*<div class="alert alert-info" role="alert">
+    @ViewData["WelcomeMessage"] <br />
+    @ViewData["WeatherMessage"]
+</div>*@
+
+<div class="card justify-content-md-center" style="width: 18rem;">
+
+    @if (@ViewData["WeatherStatus"].ToString() == "Sunny")
+    {
+        <img class="card-img-top" src="/Images/sunny.PNG" alt="Card image cap">
+    }
+    else if (@ViewData["WeatherStatus"].ToString() == "Overcast")
+    {
+        <img class="card-img-top" src="/Images/Overcast.PNG" alt="Card image cap">
+    }
+    else if (@ViewData["WeatherStatus"].ToString() == "Raining")
+    {
+        <img class="card-img-top" src="/Images/Raining.PNG" alt="Card image cap">
+    }
+    else if (@ViewData["WeatherStatus"].ToString() == "Thundering")
+    {
+        <img class="card-img-top" src="/Images/Thundering.PNG" alt="Card image cap">
+    }
+
+    @*<img class="card-img-top" src="/Images/sunny.PNG" alt="Card image cap">*@
+    <div class="card-body">
+        <h5 class="card-title">@ViewData["WelcomeMessage"]</h5>
+        <p class="card-text">@ViewData["WeatherMessage"].</p>
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Go Home</a>
+    </div>
+</div>
