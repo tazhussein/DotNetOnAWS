@@ -1,4 +1,6 @@
-﻿using OldWebApp.Models;
+﻿using Amazon;
+using OldWebApp.Helpers;
+using OldWebApp.Models;
 using RestSharp;
 using System;
 
@@ -10,12 +12,24 @@ namespace OldWebApp.Factories
     public class GreetingsFactoryV2 : IGreetingsFactory
     {
         //welcome messages API deployed to Lambda
-        private const string _welcomeMessageServiceURL = "<Lambda API URL>/api/"; //TODO: Use AWS Parameter store
+        private string _welcomeMessageServiceURL = string.Empty; 
         private const string _welcomeMessageResource = "welcomemessage";
 
         //local weather API deployed to ECS as a docker container
-        private const string _localWeatherServiceURL = "<ECS Service API>/api/"; //TODO: Use AWS Parameter store
+        private string _localWeatherServiceURL = string.Empty;
         private const string _localWeatherResource = "localWeather";
+
+        public GreetingsFactoryV2()
+        {
+            GetConfigurationAsync();
+        }
+
+        private void GetConfigurationAsync()
+        {
+            ConfigSettingsHelper config = new ConfigSettingsHelper(RegionEndpoint.APSoutheast2);
+            _localWeatherServiceURL = config.GetAPIURL("/dotnetonaws/localweatherapi/url").Result;
+            _welcomeMessageServiceURL = config.GetAPIURL("/dotnetonaws/welcomemessageapi/url").Result;
+        }
 
         public GreetingsModel GetGreeting(string userName)
         {
