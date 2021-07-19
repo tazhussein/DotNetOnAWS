@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["LocalWeather.API/LocalWeather.API.csproj", "LocalWeather.API/"]
-RUN dotnet restore "LocalWeather.API/LocalWeather.API.csproj"
+COPY ["LocalWeather.API.csproj", "./"]
+RUN dotnet restore "./LocalWeather.API.csproj"
 COPY . .
-WORKDIR "/src/LocalWeather.API"
+WORKDIR "/src/."
 RUN dotnet build "LocalWeather.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
