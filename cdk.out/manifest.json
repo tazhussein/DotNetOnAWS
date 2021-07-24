@@ -1,0 +1,942 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "LocalWeatherApiCdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "LocalWeatherApiCdkStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/LocalWeatherApiCdkStack/localweathercluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathercluster2739CF22",
+            "trace": [
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:25)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpc030C0173",
+            "trace": [
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:355:25)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet1SubnetBA6E41AB",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:679:24)",
+              "new PublicSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:844:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet1RouteTableC4A60F81",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:695:23)",
+              "new PublicSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:844:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet1RouteTableAssociationFE5744E7",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:700:9)",
+              "new PublicSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:844:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet1DefaultRouteDF30503F",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:735:23)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:387:32)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet1EIP4B8FB59C",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:864:27)",
+              "NatGatewayProvider.configureNat (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:77:33)",
+              "Vpc.createNatGateways (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:535:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:393:22)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet1NATGateway70960D9C",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:862:21)",
+              "NatGatewayProvider.configureNat (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:77:33)",
+              "Vpc.createNatGateways (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:535:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:393:22)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet2SubnetA48D1F42",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:679:24)",
+              "new PublicSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:844:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet2RouteTable0AF79ABB",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:695:23)",
+              "new PublicSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:844:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet2RouteTableAssociation9D5F0C27",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:700:9)",
+              "new PublicSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:844:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet2DefaultRoute27186AD5",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:735:23)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:387:32)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet2EIP290B3171",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:864:27)",
+              "NatGatewayProvider.configureNat (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:77:33)",
+              "Vpc.createNatGateways (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:535:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:393:22)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPublicSubnet2NATGateway2971986D",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:862:21)",
+              "NatGatewayProvider.configureNat (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:77:33)",
+              "Vpc.createNatGateways (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:535:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:393:22)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet1Subnet66C24F85",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:679:24)",
+              "new PrivateSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:884:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet1RouteTable6E0B532F",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:695:23)",
+              "new PrivateSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:884:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet1RouteTableAssociation182E04A4",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:700:9)",
+              "new PrivateSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:884:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet1DefaultRoute6A744700",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:782:23)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:92:16)",
+              "NatGatewayProvider.configureNat (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:86:18)",
+              "Vpc.createNatGateways (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:535:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:393:22)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet2SubnetF7329B58",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:679:24)",
+              "new PrivateSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:884:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet2RouteTable8F73CFCA",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:695:23)",
+              "new PrivateSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:884:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet2RouteTableAssociation06773035",
+            "trace": [
+              "new Subnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:700:9)",
+              "new PrivateSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:884:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:561:32)",
+              "Vpc.createSubnets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:557:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:14)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcPrivateSubnet2DefaultRouteAC7E9C94",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:782:23)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:92:16)",
+              "NatGatewayProvider.configureNat (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:86:18)",
+              "Vpc.createNatGateways (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:535:18)",
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:393:22)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcIGW133602EC",
+            "trace": [
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:380:25)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathercluster/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweatherclusterVpcVPCGW88A957DF",
+            "trace": [
+              "new Vpc (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:383:25)",
+              "new Cluster (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:33)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcLB38F7B5CF",
+            "trace": [
+              "new BaseLoadBalancer (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-load-balancer.js:35:26)",
+              "new ApplicationLoadBalancer (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:28:9)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:55:89)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcLBSecurityGroup5D3D3BDD",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:213:30)",
+              "new ApplicationLoadBalancer (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:34:56)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:55:89)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/LB/SecurityGroup/to LocalWeatherApiCdkStacklocalweathersvcServiceSecurityGroup350025AE:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcLBSecurityGrouptoLocalWeatherApiCdkStacklocalweathersvcServiceSecurityGroup350025AE8099A74CCA",
+            "trace": [
+              "SecurityGroup.addEgressRule (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:70:13)",
+              "SecurityGroup.addEgressRule (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:345:19)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:81:31",
+              "ReactiveList.forEachAndForever (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:226:13)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:80:51",
+              "ReactiveList.forEachAndForever (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:226:13)",
+              "Connections.allowTo (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:79:30)",
+              "Connections.allowFrom (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:112:31)",
+              "ApplicationListener.registerConnectable (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:322:33)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:120:22)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:323:29)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:284:47)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:71:35)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:163:26)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:78:14)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcLBPublicListener60581645",
+            "trace": [
+              "new BaseListener (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-listener.js:21:26)",
+              "new ApplicationListener (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:32:9)",
+              "ApplicationLoadBalancer.addListener (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:74:26)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:67:38)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcLBPublicListenerECSGroup8D060C57",
+            "trace": [
+              "new TargetGroupBase (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-target-group.js:44:25)",
+              "new ApplicationTargetGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:26:9)",
+              "ApplicationListener.addTargets (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:228:23)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:72:42)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcLoadBalancerDNSDE2E62AF",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:132:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcServiceURL1FA51A92",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:133:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcTaskDefTaskRoleAC928596",
+            "trace": [
+              "new Role (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:72:22)",
+              "new TaskDefinition (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:97:43)",
+              "new FargateTaskDefinition (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.js:25:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:32:35)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcTaskDefAB4E9E79",
+            "trace": [
+              "new TaskDefinition (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:103:25)",
+              "new FargateTaskDefinition (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.js:25:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:32:35)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcTaskDefwebLogGroup3FBE615D",
+            "trace": [
+              "new LogGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.js:165:26)",
+              "AwsLogDriver.bind (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.js:45:48)",
+              "new ContainerDefinition (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:114:50)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:261:16)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:45:51)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcTaskDefExecutionRole0A40A6BC",
+            "trace": [
+              "new Role (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:72:22)",
+              "FargateTaskDefinition.obtainExecutionRole (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:336:35)",
+              "EcrImage.bind (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\ecr.js:35:70)",
+              "new ContainerDefinition (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:112:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:261:16)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:45:51)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcTaskDefExecutionRoleDefaultPolicy44B6163A",
+            "trace": [
+              "new Policy (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:56:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:209:34)",
+              "Function.addToPrincipal (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:90:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:45:30)",
+              "Import.grant (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecr\\lib\\repository.js:154:26)",
+              "Import.grantPull (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecr\\lib\\repository.js:168:26)",
+              "EcrImage.bind (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\ecr.js:35:25)",
+              "new ContainerDefinition (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:112:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:261:16)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:45:51)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcService2E1B2B72",
+            "trace": [
+              "new BaseService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:142:25)",
+              "new FargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.js:34:9)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:60:24)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcServiceSecurityGroup42813B4D",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:213:30)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:531:31)",
+              "new FargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.js:52:14)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:60:24)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/localweathersvc/Service/SecurityGroup/from LocalWeatherApiCdkStacklocalweathersvcLBSecurityGroupC550F5A0:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localweathersvcServiceSecurityGroupfromLocalWeatherApiCdkStacklocalweathersvcLBSecurityGroupC550F5A080F064BE4D",
+            "trace": [
+              "SecurityGroup.addIngressRule (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:55:13)",
+              "SecurityGroup.addIngressRule (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:305:19)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:106:31",
+              "ReactiveList.forEachAndForever (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:226:13)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:105:51",
+              "ReactiveList.forEachAndForever (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:226:13)",
+              "Connections.allowFrom (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:104:30)",
+              "ApplicationListener.registerConnectable (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:322:33)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:120:22)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:323:29)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:284:47)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:71:35)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.js:163:26)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.js:78:14)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/--dotnetonaws--localweatherapi--url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dotnetonawslocalweatherapiurl23927539",
+            "trace": [
+              "new StringParameter (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.js:98:26)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:22:30)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:139:9",
+              "visit (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:200:9)",
+              "visit (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:197:9)",
+              "injectMetadataResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:5)",
+              "Object.synthesize (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\stage.js:100:41)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7970:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7970:107",
+              "Kernel._ensureSync (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8563:28)",
+              "Kernel.invoke (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7970:34)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/LocalWeatherApiCdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:30:35)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:139:9",
+              "visit (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:200:9)",
+              "visit (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:197:9)",
+              "injectMetadataResources (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:5)",
+              "Object.synthesize (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\awstas\\AppData\\Local\\Temp\\jsii-kernel-GBzv0x\\node_modules\\@aws-cdk\\core\\lib\\stage.js:100:41)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7970:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8582:24)",
+              "C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7970:107",
+              "Kernel._ensureSync (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:8563:28)",
+              "Kernel.invoke (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:7970:34)",
+              "KernelHost.processRequest (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\awstas\\AppData\\Local\\Temp\\0xbo5mvy.jvr\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "LocalWeatherApiCdkStack"
+    }
+  }
+}
