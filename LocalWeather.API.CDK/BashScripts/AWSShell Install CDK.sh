@@ -1,3 +1,7 @@
-﻿echo starting CDK deploy
-cdk deploy --ci --require-approval never
-echo finished CDK deploy
+﻿echo installing AWS CDK
+sudo npm install -g aws-cdk
+echo installing npm
+npm install
+npm run build
+echo staring CDK synth
+cdk synth
