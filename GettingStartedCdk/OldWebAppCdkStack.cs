@@ -18,6 +18,8 @@ namespace GettingStartedCdk
                 AssumedBy = new ServicePrincipal("ec2.amazonaws.com")
             });
 
+            ebsInstanceRole.AddManagedPolicy(ManagedPolicy.FromAwsManagedPolicyName("AmazonSSMFullAccess"));
+
             var instanceProfile = new CfnInstanceProfile(this, profileName, new CfnInstanceProfileProps
             {
                 InstanceProfileName = profileName,
@@ -41,7 +43,7 @@ namespace GettingStartedCdk
                 {
                     Namespace = "aws:elasticbeanstalk:application:environment",
                     OptionName = "ASPNETCORE_ENVIRONMENT",
-                    Value = ""
+                    Value = "Development "
                 }
             };
 
@@ -59,6 +61,8 @@ namespace GettingStartedCdk
                 SolutionStackName = "64bit Amazon Linux 2 v2.2.3 running .NET Core",
                 OptionSettings = optionSettingProperties
             });
+
+            environment.AddDependsOn(app);
         }
     }
 }
