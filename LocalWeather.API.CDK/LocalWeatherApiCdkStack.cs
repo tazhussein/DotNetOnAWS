@@ -10,6 +10,7 @@ namespace LocalWeatherApiCdk
 {
     public class LocalWeatherApiCdkStack : Stack
     {
+        //Guide to installing the AWS CDK Toolkit: https://docs.aws.amazon.com/cdk/latest/guide/cli.html
         internal LocalWeatherApiCdkStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
         {
             string ssmAPIParameterName = "/dotnetonaws/localweatherapi/url";
@@ -27,6 +28,7 @@ namespace LocalWeatherApiCdk
             /********************************************************************************************************************************
             * Using Amazon.CDK.AWS.ECS.Patterns constructs to reduce lines of code needed to create ECS Cluster, Service, Tasks and ALB.
             * Unless an existing or pre-defined VPC is passed in this construct will create a new VPc and associated networking components.
+            * If you don't want to use ECS Patterns here's a guide to using the underlying components independantly: https://docs.aws.amazon.com/cdk/latest/guide/ecs_example.html
             ********************************************************************************************************************************/
             var fargateECS = new ApplicationLoadBalancedFargateService(this, ecsServiceName,
                 new ApplicationLoadBalancedFargateServiceProps
