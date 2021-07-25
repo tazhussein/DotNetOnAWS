@@ -9,458 +9,6 @@
         "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Resource"
       }
     },
-    "localweatherclusterVpc030C0173": {
-      "Type": "AWS::EC2::VPC",
-      "Properties": {
-        "CidrBlock": "10.0.0.0/16",
-        "EnableDnsHostnames": true,
-        "EnableDnsSupport": true,
-        "InstanceTenancy": "default",
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/Resource"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet1SubnetBA6E41AB": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.0.0.0/18",
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "AvailabilityZone": {
-          "Fn::Select": [
-            0,
-            {
-              "Fn::GetAZs": ""
-            }
-          ]
-        },
-        "MapPublicIpOnLaunch": true,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "Public"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Public"
-          },
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1/Subnet"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet1RouteTableC4A60F81": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1/RouteTable"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet1RouteTableAssociationFE5744E7": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPublicSubnet1RouteTableC4A60F81"
-        },
-        "SubnetId": {
-          "Ref": "localweatherclusterVpcPublicSubnet1SubnetBA6E41AB"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1/RouteTableAssociation"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet1DefaultRouteDF30503F": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPublicSubnet1RouteTableC4A60F81"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "GatewayId": {
-          "Ref": "localweatherclusterVpcIGW133602EC"
-        }
-      },
-      "DependsOn": [
-        "localweatherclusterVpcVPCGW88A957DF"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1/DefaultRoute"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet1EIP4B8FB59C": {
-      "Type": "AWS::EC2::EIP",
-      "Properties": {
-        "Domain": "vpc",
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1/EIP"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet1NATGateway70960D9C": {
-      "Type": "AWS::EC2::NatGateway",
-      "Properties": {
-        "SubnetId": {
-          "Ref": "localweatherclusterVpcPublicSubnet1SubnetBA6E41AB"
-        },
-        "AllocationId": {
-          "Fn::GetAtt": [
-            "localweatherclusterVpcPublicSubnet1EIP4B8FB59C",
-            "AllocationId"
-          ]
-        },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet1/NATGateway"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet2SubnetA48D1F42": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.0.64.0/18",
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "AvailabilityZone": {
-          "Fn::Select": [
-            1,
-            {
-              "Fn::GetAZs": ""
-            }
-          ]
-        },
-        "MapPublicIpOnLaunch": true,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "Public"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Public"
-          },
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2/Subnet"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet2RouteTable0AF79ABB": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2/RouteTable"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet2RouteTableAssociation9D5F0C27": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPublicSubnet2RouteTable0AF79ABB"
-        },
-        "SubnetId": {
-          "Ref": "localweatherclusterVpcPublicSubnet2SubnetA48D1F42"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2/RouteTableAssociation"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet2DefaultRoute27186AD5": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPublicSubnet2RouteTable0AF79ABB"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "GatewayId": {
-          "Ref": "localweatherclusterVpcIGW133602EC"
-        }
-      },
-      "DependsOn": [
-        "localweatherclusterVpcVPCGW88A957DF"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2/DefaultRoute"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet2EIP290B3171": {
-      "Type": "AWS::EC2::EIP",
-      "Properties": {
-        "Domain": "vpc",
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2/EIP"
-      }
-    },
-    "localweatherclusterVpcPublicSubnet2NATGateway2971986D": {
-      "Type": "AWS::EC2::NatGateway",
-      "Properties": {
-        "SubnetId": {
-          "Ref": "localweatherclusterVpcPublicSubnet2SubnetA48D1F42"
-        },
-        "AllocationId": {
-          "Fn::GetAtt": [
-            "localweatherclusterVpcPublicSubnet2EIP290B3171",
-            "AllocationId"
-          ]
-        },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PublicSubnet2/NATGateway"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet1Subnet66C24F85": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.0.128.0/18",
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "AvailabilityZone": {
-          "Fn::Select": [
-            0,
-            {
-              "Fn::GetAZs": ""
-            }
-          ]
-        },
-        "MapPublicIpOnLaunch": false,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "Private"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Private"
-          },
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet1/Subnet"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet1RouteTable6E0B532F": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet1/RouteTable"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet1RouteTableAssociation182E04A4": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPrivateSubnet1RouteTable6E0B532F"
-        },
-        "SubnetId": {
-          "Ref": "localweatherclusterVpcPrivateSubnet1Subnet66C24F85"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet1/RouteTableAssociation"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet1DefaultRoute6A744700": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPrivateSubnet1RouteTable6E0B532F"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "NatGatewayId": {
-          "Ref": "localweatherclusterVpcPublicSubnet1NATGateway70960D9C"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet1/DefaultRoute"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet2SubnetF7329B58": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.0.192.0/18",
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "AvailabilityZone": {
-          "Fn::Select": [
-            1,
-            {
-              "Fn::GetAZs": ""
-            }
-          ]
-        },
-        "MapPublicIpOnLaunch": false,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "Private"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Private"
-          },
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet2/Subnet"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet2RouteTable8F73CFCA": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet2/RouteTable"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet2RouteTableAssociation06773035": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPrivateSubnet2RouteTable8F73CFCA"
-        },
-        "SubnetId": {
-          "Ref": "localweatherclusterVpcPrivateSubnet2SubnetF7329B58"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet2/RouteTableAssociation"
-      }
-    },
-    "localweatherclusterVpcPrivateSubnet2DefaultRouteAC7E9C94": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "localweatherclusterVpcPrivateSubnet2RouteTable8F73CFCA"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "NatGatewayId": {
-          "Ref": "localweatherclusterVpcPublicSubnet2NATGateway2971986D"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/PrivateSubnet2/DefaultRoute"
-      }
-    },
-    "localweatherclusterVpcIGW133602EC": {
-      "Type": "AWS::EC2::InternetGateway",
-      "Properties": {
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "LocalWeatherApiCdkStack1/localweathercluster/Vpc"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/IGW"
-      }
-    },
-    "localweatherclusterVpcVPCGW88A957DF": {
-      "Type": "AWS::EC2::VPCGatewayAttachment",
-      "Properties": {
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        },
-        "InternetGatewayId": {
-          "Ref": "localweatherclusterVpcIGW133602EC"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathercluster/Vpc/VPCGW"
-      }
-    },
     "localweathersvcLB38F7B5CF": {
       "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
       "Properties": {
@@ -481,19 +29,12 @@
           }
         ],
         "Subnets": [
-          {
-            "Ref": "localweatherclusterVpcPublicSubnet1SubnetBA6E41AB"
-          },
-          {
-            "Ref": "localweatherclusterVpcPublicSubnet2SubnetA48D1F42"
-          }
+          "subnet-46238c0e",
+          "subnet-0402bd62",
+          "subnet-2994fe70"
         ],
         "Type": "application"
       },
-      "DependsOn": [
-        "localweatherclusterVpcPublicSubnet1DefaultRouteDF30503F",
-        "localweatherclusterVpcPublicSubnet2DefaultRoute27186AD5"
-      ],
       "Metadata": {
         "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathersvc/LB/Resource"
       }
@@ -511,9 +52,7 @@
             "ToPort": 80
           }
         ],
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        }
+        "VpcId": "vpc-4be42e2d"
       },
       "Metadata": {
         "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathersvc/LB/SecurityGroup/Resource"
@@ -571,9 +110,7 @@
         "Port": 80,
         "Protocol": "HTTP",
         "TargetType": "ip",
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        }
+        "VpcId": "vpc-4be42e2d"
       },
       "Metadata": {
         "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathersvc/LB/PublicListener/ECSGroup/Resource"
@@ -609,14 +146,7 @@
               "Fn::Join": [
                 "",
                 [
-                  {
-                    "Ref": "AWS::AccountId"
-                  },
-                  ".dkr.ecr.",
-                  {
-                    "Ref": "AWS::Region"
-                  },
-                  ".",
+                  "574931369507.dkr.ecr.ap-southeast-1.",
                   {
                     "Ref": "AWS::URLSuffix"
                   },
@@ -631,9 +161,7 @@
                   "Ref": "localweathersvcTaskDefwebLogGroup3FBE615D"
                 },
                 "awslogs-stream-prefix": "localweathersvc",
-                "awslogs-region": {
-                  "Ref": "AWS::Region"
-                }
+                "awslogs-region": "ap-southeast-1"
               }
             },
             "Name": "web",
@@ -717,15 +245,7 @@
                     {
                       "Ref": "AWS::Partition"
                     },
-                    ":ecr:",
-                    {
-                      "Ref": "AWS::Region"
-                    },
-                    ":",
-                    {
-                      "Ref": "AWS::AccountId"
-                    },
-                    ":repository/localweather"
+                    ":ecr:ap-southeast-1:574931369507:repository/localweather"
                   ]
                 ]
               }
@@ -797,12 +317,9 @@
               }
             ],
             "Subnets": [
-              {
-                "Ref": "localweatherclusterVpcPrivateSubnet1Subnet66C24F85"
-              },
-              {
-                "Ref": "localweatherclusterVpcPrivateSubnet2SubnetF7329B58"
-              }
+              "subnet-46238c0e",
+              "subnet-0402bd62",
+              "subnet-2994fe70"
             ]
           }
         },
@@ -830,9 +347,7 @@
             "IpProtocol": "-1"
           }
         ],
-        "VpcId": {
-          "Ref": "localweatherclusterVpc030C0173"
-        }
+        "VpcId": "vpc-4be42e2d"
       },
       "Metadata": {
         "aws:cdk:path": "LocalWeatherApiCdkStack1/localweathersvc/Service/SecurityGroup/Resource"
@@ -865,11 +380,12 @@
     "dotnetonawslocalweatherapiurl23927539": {
       "Type": "AWS::SSM::Parameter",
       "Properties": {
-        "Type": "SecureString",
+        "Type": "String",
         "Value": {
           "Fn::Join": [
             "",
             [
+              "http://",
               {
                 "Fn::GetAtt": [
                   "localweathersvcLB38F7B5CF",
@@ -890,12 +406,11 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAACn1STW/bMAz9Lb0rSr1h2GnAUjcrAhSZ4QS5KwrrqrElQ6RSBIb/+yjZSdxuGHTQ4+PXI6VMZtk3eX/3U73jTB+O8047D7LbkNJHUQK64DWI/MX+DtQGErmzSD5oitzUz46DIeNsL2KtDrSXJbQODTl/flAIAjTKLq8DEviUMsJfyleKYKvw+AgvxqYyMeAz4ywpY8FPuDF3A/5kBiEj7LndF9ntWh3JXZGLIuxrozdhbyGpv6HShdh+X8ONv3ELRKeNuohKjgiWqyJea0VPrOBdnUXhzSmKuRZeWZ6P8SVgUDJaC+IlvzZgSWxAB2/o/ORdaIch/kcsKw+If9Erm/g4Oc5aRbE3ykXb8thJ/rNThwdVK6vh8GlxUCsko2uO2KcIY6sT7+/f2en5PtjTOMOvaseYC574t9yZV3KZbGL2wqhGdqUbHiLdheO8tLkB9aJ2Ff+jZ1ddS1xwLxCb+Hk9qy+UVw2MX+1q9H0vHh2tgeZfZSaz73O5Xm5z/vSscLYDj6zwx4l980zex3P3hsbMfLBkGpDlcP8B5P15GjgDAAA="
+        "Analytics": "v2:deflate64:H4sIAAAAAAAACn1STU/DMAz9Lbun6QpCnJBg3UBI05i6iXvIvCqsTarYGZqq/HeSfkxjIJSD7ef39OwkGc+yOz6dPIovTOTukLbSWODthoQ8sALQOCuB5Xv95qhxxHKjkayTFLGx71mUtyAtL6AxqMjY00wgMJDI27xySGCjYkyfhS0FwVbgYQ57pRUpoyPhGjGahNJgL7BBuwF7VP1sQ+qjXdIICg4a+VPTVEqKqFkasZuJSmgJuys5VAJJySowPjqG0uXxhrd/q7slftSXPBV20wNnzC/62+AM9GKNa/pVz2WcPHhuQDqr6HSm/A8sSguIv+BX3eGeKVHztjBVd0ddXJswyymWfeZZZcrwQktTni3G3DPEOv4EG25kLayoYXjEc+G9Z3NDK6D0lmc8u0/5arHNww8KWyfvYDFs/XAMvTTj03gmn6hUYp0mVQMv+vgN99gYzIUCAAA="
       },
       "Metadata": {
         "aws:cdk:path": "LocalWeatherApiCdkStack1/CDKMetadata/Default"
-      },
-      "Condition": "CDKMetadataAvailable"
+      }
     }
   },
   "Outputs": {
@@ -922,200 +437,6 @@
           ]
         ]
       }
-    }
-  },
-  "Conditions": {
-    "CDKMetadataAvailable": {
-      "Fn::Or": [
-        {
-          "Fn::Or": [
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "af-south-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-east-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-northeast-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-northeast-2"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-south-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-southeast-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ap-southeast-2"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "ca-central-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "cn-north-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "cn-northwest-1"
-              ]
-            }
-          ]
-        },
-        {
-          "Fn::Or": [
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-central-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-north-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-south-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-west-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-west-2"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "eu-west-3"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "me-south-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "sa-east-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-east-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-east-2"
-              ]
-            }
-          ]
-        },
-        {
-          "Fn::Or": [
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-west-1"
-              ]
-            },
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "AWS::Region"
-                },
-                "us-west-2"
-              ]
-            }
-          ]
-        }
-      ]
     }
   }
 }
