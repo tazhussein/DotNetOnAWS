@@ -26,7 +26,8 @@ namespace OldWebApp.Factories
 
         private void GetConfigurationAsync()
         {
-            ConfigSettingsHelper config = new ConfigSettingsHelper(RegionEndpoint.APSoutheast2);
+            //TODO: change hard coded value to find current region app is running on.
+            ConfigSettingsHelper config = new ConfigSettingsHelper(RegionEndpoint.APSoutheast1);
             _localWeatherServiceURL = config.GetAPIURL("/dotnetonaws/localweatherapi/url").Result;
             _welcomeMessageServiceURL = config.GetAPIURL("/dotnetonaws/welcomemessageapi/url").Result;
         }

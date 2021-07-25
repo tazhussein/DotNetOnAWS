@@ -29,8 +29,7 @@ namespace OldWebApp.Helpers
 
             var response = await ssmClient.GetParameterAsync(new GetParameterRequest
             {
-                Name = parameter,
-                WithDecryption = true
+                Name = parameter
             });
 
             return response.Parameter.Value;
