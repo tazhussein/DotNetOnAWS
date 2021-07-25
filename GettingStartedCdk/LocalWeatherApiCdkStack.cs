@@ -1,15 +1,15 @@
 using Amazon.CDK;
-using Amazon.CDK.AWS.EC2;
 using Amazon.CDK.AWS.ECR;
 using Amazon.CDK.AWS.ECS;
 using Amazon.CDK.AWS.ECS.Patterns;
-using HealthCheck = Amazon.CDK.AWS.ElasticLoadBalancingV2.HealthCheck;
 using Amazon.CDK.AWS.SSM;
+using HealthCheck = Amazon.CDK.AWS.ElasticLoadBalancingV2.HealthCheck;
 
-namespace LocalWeatherApiCdk
+namespace GettingStartedCdk
 {
     public class LocalWeatherApiCdkStack : Stack
     {
+
         //Guide to installing the AWS CDK Toolkit: https://docs.aws.amazon.com/cdk/latest/guide/cli.html
         internal LocalWeatherApiCdkStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
         {
@@ -46,8 +46,8 @@ namespace LocalWeatherApiCdk
                 }); ;
 
             //Add API controller name to ALB healthcheck
-            fargateECS.TargetGroup.ConfigureHealthCheck(new HealthCheck() 
-            { 
+            fargateECS.TargetGroup.ConfigureHealthCheck(new HealthCheck()
+            {
                 Path = apiResourcePath
             });
 
@@ -59,8 +59,6 @@ namespace LocalWeatherApiCdk
                 Description = "URL for the LocalWeather API. Used by the OldWebApp MVC project to be hosted on BeanStalk",
                 ParameterName = ssmAPIParameterName
             });
-
         }
-
     }
 }

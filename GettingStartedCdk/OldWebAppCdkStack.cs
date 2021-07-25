@@ -2,7 +2,7 @@ using Amazon.CDK;
 using Amazon.CDK.AWS.ElasticBeanstalk;
 using Amazon.CDK.AWS.IAM;
 
-namespace OldWebAppCdk
+namespace GettingStartedCdk
 {
     public class OldWebAppCdkStack : Stack
     {

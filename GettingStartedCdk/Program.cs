@@ -1,6 +1,9 @@
 ﻿using Amazon.CDK;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace LocalWeatherApiCdk
+namespace GettingStartedCdk
 {
     sealed class Program
     {
@@ -8,9 +11,9 @@ namespace LocalWeatherApiCdk
         {
             var app = new App();
             new LocalWeatherApiCdkStack(app, "LocalWeatherApiCdkStack");
+            new OldWebAppCdkStack(app, "OldWebAppCdkStack");
 
             app.Synth();
         }
-
     }
 }
