@@ -34,6 +34,16 @@
           }
         }
       }
+    },
+    "ApiEndpointParameter": {
+        "Type": "AWS::SSM::Parameter",
+        "Properties": {
+            "Name": "/dotnetonaws/welcomemessageapi/url",
+            "Type": "String",
+            "Value": {
+                "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+            }
+        }
     }
   },
   "Outputs": {

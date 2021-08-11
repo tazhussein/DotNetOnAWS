@@ -12,12 +12,6 @@ namespace OldWebApp.Helpers
     {
         private readonly RegionEndpoint _region;
 
-        //welcome messages API deployed to Lambda
-        private string _welcomeMessageServiceURL = "";
-
-        //local weather API deployed to ECS as a docker container
-        private string _localWeatherServiceURL = "";
-
         public ConfigSettingsHelper(RegionEndpoint region)
         {
             _region = region;

@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 5.0
+  build:
+    commands:
+      - dotnet build ./src/OldWebApp/OldWebApp.csproj
+  post_build:
+    commands:
+      - dotnet publish -r linux-x64 ./src/OldWebApp/OldWebApp.csproj
+artifacts:  
+  files:
+    - ./src/OldWebApp/bin/Debug/net5.0/linux-x64/publish/**/*
+  discard-paths: yes
