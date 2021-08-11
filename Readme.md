@@ -20,14 +20,26 @@ To use CDK from your local windows machine please follow the steps below to inst
 
 ### Solution
 This solution consists of 4 projects: <br>
+
+(Solution) GettingStarted
+|
+|-- (Project) GettingStartedCdk
+|
+|-- (Project)  LocalWeather.API
+|
+|-- (Project) OldWebApp
+|
+|-- (Project) WelcomeMessage.API
+
+**GettingStartedCDK** is a CDK project containing code (using .NET Core) which will create infrastructure to
+host the above mentioned workloads.
+
+**LocalWeather.API** is a .NET core restful API which will be deployed onto Amazon Elastic Container Service as a containerized workload.
+
 **OldWebApp** is an ASP.NET Core MVC project which will be dpeloyed onto Elastic Beanstalk.
 
 **WelcomeMessage.API** is a .NET Core restful API which will be deployed onto AWS Lambda as a serverless application.
 
-**LocalWeather.API** is a .NET core restful API which will be deployed onto Amazon Elastic Container Service as a containerized workload.
-
-**GettingStartedCDK** is a CDK project containing code (using .NET Core) which will create infrastructure to
-host the above mentioned workloads.
 
 ### GettingStartedCDK for Azure DevOps deployments
 The follow CDK code will be triggered from Azure DevOps Pipelines:
