@@ -41,7 +41,7 @@
             "Name": "/dotnetonaws/welcomemessageapi/url",
             "Type": "String",
             "Value": {
-              "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+              "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/api/"
             }
         }
     }
