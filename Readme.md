@@ -2,6 +2,8 @@
 
 This poject shows how to use .NET with CDK to create infrastructure to deploy workloads onto AWS from Azure DevOps and AWS CodePipeline.
 
+If you have any questions, feel free to reach out to me on [Twitter](http://twitter.com/husseintaz) or [LinkedIn](https://www.linkedin.com/in/tasleem-taz-hussein-b300a577/)
+
 ## How to install the AWS CLI and the AWS CDK
 Install the AWS CLI onto windows. Please follow the steps at the following location [link to the AWS CLI user guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html)
 
