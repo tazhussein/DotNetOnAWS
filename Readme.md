@@ -10,6 +10,7 @@ Install the AWS CLI onto windows. Please follow the steps at the following locat
 To use CDK from your local windows machine please follow the steps below to install the AWS CDK:
 - Install NPM onto windows [link to npm Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - Open the windows command prompt and run the following commands to install the AWS CDK:
+
 	```
 	npm install -g aws-cdk
 	cdk --version
@@ -36,9 +37,9 @@ To deploy the applications onto AWS from your local machine run the following co
 This should show you the stacks available for deployment as below
 
   ```
-	BealstalkPipelineStack
-	ECSECRPipelineStack
-	LambdaPipelineStack	
+  BealstalkPipelineStack
+  ECSECRPipelineStack
+  LambdaPipelineStack	
   ```
 
 Each item in the list is a stack available for deployment. Running the commands will create a CI/CD pipeline in AWS CodePipeline.
@@ -74,9 +75,12 @@ This solution consists of 4 projects: <br>
 **GettingStartedCDK** is a CDK project containing code (using .NET Core) which will create infrastructure to
 host the above mentioned workloads.
 
+
 **LocalWeather.API** is a .NET core restful API which will be deployed onto Amazon Elastic Container Service as a containerized workload.
 
+
 **OldWebApp** is an ASP.NET Core MVC project which will be dpeloyed onto Elastic Beanstalk.
+
 
 **WelcomeMessage.API** is a .NET Core restful API which will be deployed onto AWS Lambda as a serverless application.
 
@@ -89,6 +93,7 @@ The follow CDK code will be triggered from Azure DevOps Pipelines:
 ### GettingStartedCDK for AWS deployments
 The following CDK core will be run from the AWS CLI to create CI/CD pipelines:
 
+
 - **GettingStartedCDK.LocalWeatherAPICdk.AWS.ECSECRPipelineStack.cs:**
 	- Creates an ECR repository to host a Docker Image
 	- Creates an ECS environment to host our LocalWeather.API web service. This will create a new VPC and associated networking components
@@ -96,10 +101,12 @@ The following CDK core will be run from the AWS CLI to create CI/CD pipelines:
 	- Uses the buildspec-localweatherapi.yml buildspec to create the docker image (using the Dockerfile)
 	- Uses the Dockerfile to compile the .NET Core application before it is deployed onto the Docker image
 
+
 - **GettingStartedCDK.WelcomeMessageAPICdk.AWS.LambdaPipelineStack.cs:**
 	- Creates a CI/CD pipeline (and associated build & deployment steps) to compile our application and deploy it as a serverless application onto AWS Lambda
 	- Creates an Amazon API Gateway endpoint to front our API
 	- The buildspec.yml file is built incode to demonstrate another option for creating the buildspec.yml file (as opposed to using a pre-created file as per the ECSECRPipelineStack)
+
 
 - **GettingStartedCDK.OldWebAppCdk.OldWebAppPipelineStack.cs:**
 	- Creates an Elastic Beanstalk environment to host our web application
