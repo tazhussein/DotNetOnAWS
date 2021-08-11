@@ -26,8 +26,8 @@ Copy this application from Github into a source repository in AWS CodeCommit. Us
 To deploy the applications onto AWS from your local machine run the following commands from the windows CLI once the AWS CLI and CDK is installed.
 
 - Open the windows command prompt 
-- navigate to the root directory of the project where the cdk.json file is located
-- run the following commands
+- Navigate to the root directory of the project where the cdk.json file is located
+- Run the following commands
 
   ```
 	cdk list
