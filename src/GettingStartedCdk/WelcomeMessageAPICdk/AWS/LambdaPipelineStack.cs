@@ -56,8 +56,6 @@ namespace GettingStartedCdk.WelcomeMessageAPICdk.AWS
                         {
                             ["commands"] = "dotnet tool install -g Amazon.Lambda.Tools",
                             ["commands"] = "dotnet lambda package-ci --template ./src/WelcomeMessage.API/serverless.template --output-template packaged-template.yaml --s3-bucket " + bucket.BucketName + " --s3-prefix " + constants.S3BuildOutputPath
-                            //["commands"] = "dotnet build ./src/WelcomeMessage.API/WelcomeMessage.csproj",
-                            //["commands"] = "aws cloudformation package --template-file ./src/WelcomeMessage.API/serverless.template --s3-bucket " +  bucket.BucketName + " --s3-prefix " + constants.S3BuildOutputPath + " --output-template-file packaged-template.yaml"
                         }
                     },
                     ["artifacts"] = new Dictionary<string, string>
