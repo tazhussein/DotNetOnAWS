@@ -20,7 +20,7 @@ To use CDK from your local windows machine please follow the steps below to inst
 	cdk bootstrap
 	```
 
-### How to deploy the CDK stacks
+### How to deploy the CDK Stacks
 Copy this application from Github into a source repository in AWS CodeCommit. Use the same structure as this Github repository.
 
 To deploy the applications onto AWS from your local machine run the following commands from the windows CLI once the AWS CLI and CDK is installed.
