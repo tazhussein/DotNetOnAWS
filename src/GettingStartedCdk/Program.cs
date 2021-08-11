@@ -1,6 +1,8 @@
 ﻿using Amazon.CDK;
 using GettingStartedCdk.LocalWeatherAPICdk.AWS;
+using GettingStartedCdk.LocalWeatherAPICdk.Azure;
 using GettingStartedCdk.OldWebAppCdk.AWS;
+using GettingStartedCdk.OldWebAppCdk.Azure;
 using GettingStartedCdk.WelcomeMessageAPICdk.AWS;
 
 namespace GettingStartedCdk
