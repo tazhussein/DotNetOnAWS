@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\buildspec-localweatherapi.yml = ..\buildspec-localweatherapi.yml
 		..\buildspec-oldwebapp.yml = ..\buildspec-oldwebapp.yml
 		..\cdk.json = ..\cdk.json
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalWeather.API", "LocalWeather.API\LocalWeather.API.csproj", "{A899FF82-25B2-4245-A39C-E4083C030BAC}"
