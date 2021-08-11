@@ -18,6 +18,40 @@ To use CDK from your local windows machine please follow the steps below to inst
 	cdk bootstrap
 	```
 
+### How to deploy the CDK stacks
+Copy this application from Github into a source repository in AWS CodeCommit. Use the same structure as this Github repository.
+
+To deploy the applications onto AWS from your local machine run the following commands from the windows CLI once the AWS CLI and CDK is installed.
+
+- Open the windows command prompt 
+- navigate to the root directory of the project where the cdk.json file is located
+- run the following commands
+
+  ```
+	cdk list
+  ```
+  
+This should show you the stacks available for deployment as below
+
+  ```
+	BealstalkPipelineStack
+	ECSECRPipelineStack
+	LambdaPipelineStack	
+  ```
+
+Each item in the list is a stack available for deployment. Running the commands will create a CI/CD pipeline in AWS CodePipeline.
+
+Run the following commands to deploy the CDK stacks onto AWS, create the CI/CD pipeline and deploy the apis and MVC webapp onto AWS:
+  
+  ```
+  cdk deploy LambdaPipelineStack
+  cdk deploy ECSECRPipelineStack
+  cdk deploy BealstalkPipelineStack
+  ```
+
+Once deployed, log into your AWS console to investigate the AWS CloudFormation stacks being created along with the relevant AWS CodePipeline actions.
+***Do not forget to dispose of the deployments once you are done to avoid unexpected charges!***
+
 ### Solution
 This solution consists of 4 projects: <br>
 
