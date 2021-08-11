@@ -7,13 +7,17 @@ namespace GettingStartedCdk.Helpers
 {
     public class StackConstantsHelper
     {
+        private static string codeCommitRepoName = "DotNetOnAWS";
+        private static string codeCommitBranch = "master";
+
         public static WelcomeMessageAPIConstants GetLambdaConstants()
         {
+
             WelcomeMessageAPIConstants retval = new WelcomeMessageAPIConstants()
             {
                 StackPrefix = "WelcomeMessageApi",
-                CodeCommitBranch = "master",
-                CodeCommitRepoName = "cdktest",
+                CodeCommitBranch = codeCommitBranch,
+                CodeCommitRepoName = codeCommitRepoName,
                 S3BuildOutputPath = "sam-welcomemessageapi-output/",
                 StackName = "WelcomeMessageApi-Sam",
                 ChangeSetName = "WelcomeMessageApi-ChangeSet"
@@ -28,8 +32,8 @@ namespace GettingStartedCdk.Helpers
             {
                 StackPrefix = "OldWebApp",
                 BuildSpecFileName = "buildspec-oldwebapp.yml",
-                CodeCommitBranch = "master",
-                CodeCommitRepoName = "cdktest",
+                CodeCommitBranch = codeCommitBranch,
+                CodeCommitRepoName = codeCommitRepoName,
                 ApplicationName = "OldWebApp-App",
                 EnvironmentName = "OldWebApp-Env",
                 ProfileName = "OldWebApp-Instance-Profile"
@@ -43,8 +47,8 @@ namespace GettingStartedCdk.Helpers
             LocalWeatherAPIConstants retval = new LocalWeatherAPIConstants
             {
                 StackPrefix = "LocalWeatherApi",
-                CodeCommitRepoName = "cdktest",
-                CodeCommitBranch = "master",
+                CodeCommitRepoName = codeCommitRepoName,
+                CodeCommitBranch = codeCommitBranch,
                 ECRRegistryName = "localweather",
                 ECSClusterName = "LocalWeatherApiCluster",
                 ECSServiceName = "LocalWeatherApiService",
