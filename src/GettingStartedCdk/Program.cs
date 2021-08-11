@@ -1,7 +1,7 @@
 ﻿using Amazon.CDK;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using GettingStartedCdk.LocalWeatherAPICdk.AWS;
+using GettingStartedCdk.OldWebAppCdk.AWS;
+using GettingStartedCdk.WelcomeMessageAPICdk.AWS;
 
 namespace GettingStartedCdk
 {
@@ -10,8 +10,10 @@ namespace GettingStartedCdk
         public static void Main(string[] args)
         {
             var app = new App();
-            new LocalWeatherApiCdkStack(app, "LocalWeatherApiCdkStack");
-            new OldWebAppCdkStack(app, "OldWebAppCdkStack");
+
+            new ECSECRPipelineStack(app, "ECSECRPipelineStack");
+            new OldWebAppPipelineStack(app, "BealstalkPipelineStack");
+            new LambdaPipelineStack(app, "LambdaPipelineStack");
 
             app.Synth();
         }
