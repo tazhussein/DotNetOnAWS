@@ -91,13 +91,17 @@ The following CDK core will be run from the AWS CLI to create CI/CD pipelines:
 
 - **GettingStartedCDK.LocalWeatherAPICdk.AWS.ECSECRPipelineStack.cs:**
 	- Creates an ECR repository to host a Docker Image
-	- Creates an ECS environment to host our LocalWeather.API web service. This will create a new VPC and associated networking components.
+	- Creates an ECS environment to host our LocalWeather.API web service. This will create a new VPC and associated networking components
 	- Creates a CI/CD pipeline (and associated build & deployment steps) to compile our application, create an image in our ECR repository and deploy the image onto an ECS task
+	- Uses the buildspec-localweatherapi.yml buildspec to create the docker image (using the Dockerfile)
+	- Uses the Dockerfile to compile the .NET Core application before it is deployed onto the Docker image
 
 - **GettingStartedCDK.WelcomeMessageAPICdk.AWS.LambdaPipelineStack.cs:**
-	- Creates a CI/CD pipeline (and associated build & deployment steps) to compile our application and deploy it as a serverless application onto AWS Lambda. 
+	- Creates a CI/CD pipeline (and associated build & deployment steps) to compile our application and deploy it as a serverless application onto AWS Lambda
 	- Creates an Amazon API Gateway endpoint to front our API
+	- The buildspec.yml file is built incode to demonstrate another option for creating the buildspec.yml file (as opposed to using a pre-created file as per the ECSECRPipelineStack)
 
 - **GettingStartedCDK.OldWebAppCdk.OldWebAppPipelineStack.cs:**
 	- Creates an Elastic Beanstalk environment to host our web application
-	- Creates a CI/CD pipeline (and associated build & deployment steps) to compile our application and deploy it onto Elastic Beanstalk. 
+	- Creates a CI/CD pipeline (and associated build & deployment steps) to compile our application and deploy it onto Elastic Beanstalk
+	- Uses the buildspec-oldwebapp.yml buildspec to compile the .NET Core application and publish it to S3 for dpeloyment onto Elastic Beanstalk
