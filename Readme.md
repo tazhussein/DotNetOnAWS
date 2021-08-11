@@ -21,16 +21,19 @@ To use CDK from your local windows machine please follow the steps below to inst
 ### Solution
 This solution consists of 4 projects: <br>
 
-.
-+-- (Solution) GettingStarted
+```
+(Solution) GettingStarted
+|  buildspec-localweatherapi.yml
+|  buildspec-oldwebapp.yml
 |
-|  +-- (Project) GettingStartedCdk
+|--(Project) GettingStartedCdk
 |
-|  +-- (Project)  LocalWeather.API
+|--(Project)  LocalWeather.API
 |
-|  +-- (Project) OldWebApp
+|--(Project) OldWebApp
 |
-|  +-- (Project) WelcomeMessage.API
+|--(Project) WelcomeMessage.API
+```
 
 **GettingStartedCDK** is a CDK project containing code (using .NET Core) which will create infrastructure to
 host the above mentioned workloads.
