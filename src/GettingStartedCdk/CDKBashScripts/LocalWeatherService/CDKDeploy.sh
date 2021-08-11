@@ -1,3 +1,3 @@
-﻿echo starting CDK deploy LocalWeatherApiCdkStack
-cdk deploy LocalWeatherApiCdkStack --ci --require-approval never
+﻿echo starting CDK deploy AzureDevOpsECSStack
+cdk deploy AzureDevOpsECSStack --ci --require-approval never
 echo finished CDK deploy

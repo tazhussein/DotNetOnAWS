@@ -15,6 +15,10 @@ namespace GettingStartedCdk
             new OldWebAppPipelineStack(app, "BealstalkPipelineStack");
             new LambdaPipelineStack(app, "LambdaPipelineStack");
 
+            //Azure DevOps CDK Stacks
+            new ECSInfraStack(app, "AzureDevOpsECSStack");
+            new OldWebAppInfraStack(app, "AzureDevOpsBeanstalkStack");
+
             app.Synth();
         }
     }
