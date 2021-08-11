@@ -2,7 +2,9 @@
 
 This poject shows how to use .NET with CDK to create infrastructure to deploy workloads onto AWS from Azure DevOps and AWS CodePipeline.
 
-## How to install the AWS CDK
+## How to install the AWS CLI and the AWS CDK
+Install the AWS CLI onto windows. Please follow the steps at the following location [link to the AWS CLI user guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html)
+
 To use CDK from your local windows machine please follow the steps below to install the AWS CDK:
 - Install NPM onto windows [link to npm Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - Open the windows command prompt and run the following commands to install the AWS CDK:
@@ -17,10 +19,13 @@ To use CDK from your local windows machine please follow the steps below to inst
 	```
 
 ### Solution
-This solution consists of 4 projects: 
+This solution consists of 4 projects: <br>
 **OldWebApp** is an ASP.NET Core MVC project which will be dpeloyed onto Elastic Beanstalk.
+
 **WelcomeMessage.API** is a .NET Core restful API which will be deployed onto AWS Lambda as a serverless application.
+
 **LocalWeather.API** is a .NET core restful API which will be deployed onto Amazon Elastic Container Service as a containerized workload.
+
 **GettingStartedCDK** is a CDK project containing code (using .NET Core) which will create infrastructure to
 host the above mentioned workloads.
 
