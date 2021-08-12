@@ -13,17 +13,18 @@ namespace GettingStartedCdk.OldWebAppCdk.Azure
             string environmentName = prefix + "-Env";
             string profileName = prefix + "-Instance-Profile";
 
-            Role ebsInstanceRole = new Role(this, "Beanstalk-Ec2-Role", new RoleProps
+            Role ebInstanceRole = new Role(this, "Beanstalk-Ec2-Role", new RoleProps
             {
                 AssumedBy = new ServicePrincipal("ec2.amazonaws.com")
             });
 
-            ebsInstanceRole.AddManagedPolicy(ManagedPolicy.FromAwsManagedPolicyName("AmazonSSMFullAccess"));
+            ebInstanceRole.AddManagedPolicy(ManagedPolicy.FromAwsManagedPolicyName("AWSElasticBeanstalkWebTier"));
+            ebInstanceRole.AddManagedPolicy(ManagedPolicy.FromAwsManagedPolicyName("AmazonSSMFullAccess"));
 
             CfnInstanceProfile instanceProfile = new CfnInstanceProfile(this, profileName, new CfnInstanceProfileProps
             {
                 InstanceProfileName = profileName,
-                Roles = new string[] { ebsInstanceRole.RoleName }
+                Roles = new string[] { ebInstanceRole.RoleName }
             });
 
             CfnEnvironment.OptionSettingProperty[] optionSettingProperties = new CfnEnvironment.OptionSettingProperty[] {
@@ -48,37 +49,37 @@ namespace GettingStartedCdk.OldWebAppCdk.Azure
                 new CfnEnvironment.OptionSettingProperty()
                 {
                     Namespace =  "aws:elasticbeanstalk:environment:proxy:staticfiles",
-                    OptionName = "/lib/bootstrap/dist/css",
+                    OptionName = "/wwwroot/lib/bootstrap/dist/css",
                     Value= "/"
                 },
                 new CfnEnvironment.OptionSettingProperty()
                 {
                     Namespace= "aws:elasticbeanstalk:environment:proxy:staticfiles",
-                    OptionName= "/css",
+                    OptionName= "/wwwroot/css",
                     Value= "/"
                 },
                 new CfnEnvironment.OptionSettingProperty()
                 {
                     Namespace= "aws:elasticbeanstalk:environment:proxy:staticfiles",
-                    OptionName= "/lib/jquery/dist",
+                    OptionName= "/wwwroot/lib/jquery/dist",
                     Value= "/"
                 },
                 new CfnEnvironment.OptionSettingProperty()
                 {
                     Namespace= "aws:elasticbeanstalk:environment:proxy:staticfiles",
-                    OptionName= "/lib/bootstrap/dist/js",
+                    OptionName= "/wwwroot/lib/bootstrap/dist/js",
                     Value= "/"
                 },
                 new CfnEnvironment.OptionSettingProperty()
                 {
                     Namespace= "aws:elasticbeanstalk:environment:proxy:staticfiles",
-                    OptionName= "/js",
+                    OptionName= "/wwwroot/js",
                     Value= "/"
                 },
                 new CfnEnvironment.OptionSettingProperty()
                 {
                     Namespace= "aws:elasticbeanstalk:environment:proxy:staticfiles",
-                    OptionName= "/Images",
+                    OptionName= "/wwwroot/Images",
                     Value= "/"
                 }
             };
