@@ -13,6 +13,7 @@ namespace GettingStartedCdk
         {
             var app = new App();
 
+            //AWS CodePipeline CDK Stacks
             new ECSECRPipelineStack(app, "ECSECRPipelineStack");
             new OldWebAppPipelineStack(app, "BealstalkPipelineStack");
             new LambdaPipelineStack(app, "LambdaPipelineStack");
