@@ -1,6 +1,6 @@
 # .NET on AWS CDK Project
 
-This poject shows how to use .NET with CDK to create infrastructure to deploy workloads onto AWS from Azure DevOps Pipelines and AWS CodePipeline.
+This project shows how to use .NET with CDK to create infrastructure to deploy workloads onto AWS from Azure DevOps Pipelines and AWS CodePipeline.
 
 If you have any questions, feel free to reach out to me on [Twitter](http://twitter.com/husseintaz) or [LinkedIn](https://www.linkedin.com/in/tasleem-taz-hussein-b300a577/)
 
@@ -37,7 +37,7 @@ To deploy the applications onto AWS from your local machine run the following co
 This should show you the stacks available for deployment as below
 
   ```
-  BealstalkPipelineStack
+  BeanstalkPipelineStack
   ECSECRPipelineStack
   LambdaPipelineStack	
   ```
@@ -65,7 +65,7 @@ This solution consists of 4 projects: <br>
 |
 |--(Project) GettingStartedCdk
 |
-|--(Project)  LocalWeather.API
+|--(Project) LocalWeather.API
 |
 |--(Project) OldWebApp
 |
