@@ -108,7 +108,7 @@ namespace GettingStartedCdk.OldWebAppCdk.AWS
             {
                 EnvironmentName = constants.EnvironmentName,
                 ApplicationName = app.ApplicationName,
-                SolutionStackName = "64bit Amazon Linux 2 v2.2.3 running .NET Core",
+                SolutionStackName = "64bit Amazon Linux 2 v2.2.5 running .NET Core",
                 OptionSettings = optionSettingProperties
             });
 
